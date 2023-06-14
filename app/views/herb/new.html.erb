@@ -1,0 +1,16 @@
+<h3>Add a New Herb</h3>
+
+<%= form_with model: @herb do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br />
+  <%= form.radio_button :watered, "yes" %>
+  <%= form.label :watered, "Herb Is Watered" %>
+  <br />
+  <%= form.radio_button :watered, "no" %>
+  <%= form.label :watered, "Herb Not Watered" %>
+  <br />
+  <%= form.submit "Add Herb" %>
+<% end %>
+<br />
+<p><%= link_to 'Back to Main Page', herbs_path %></p>

@@ -1,0 +1,8 @@
+<h3>Herb Data</h3>
+
+<p>Herb: <%= @herb.name %></p>
+<p>Is watered: <%= @herb.watered %></p>
+<br />
+<p><%= link_to 'Edit Herb', edit_herb_path(@herb) %></p>
+<%= button_to 'Delete Herb', delete_herb_path(@herb), method: :delete, data: { confirm: "Are you sure?" } %>
+<p><%= link_to 'Back to Main Page', herbs_path %></p>
